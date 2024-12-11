@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="border1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: rgb(200,20,20);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.employeebank.Manager">
+    <bottom>
+        <AnchorPane prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: rgb(200,20,20);" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="cancbtn" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelOnAction" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: rgb(255,255,255);" text="Cancel" />
+                <Button fx:id="whithbtn" layoutX="708.0" layoutY="10.0" mnemonicParsing="false" onAction="#transfer" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: rgb(255,255,255);" text="Transfer" />
+            <Button layoutX="534.0" layoutY="10.0" mnemonicParsing="false" onAction="#allEmployee" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: rgb(255,255,255);" text="All Employees" />
+            <Button layoutX="147.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="40.0" prefWidth="114.0" style="-fx-background-color: rgb(255,255,255);" text="Delete Account" />
+            <Button layoutX="350.0" layoutY="10.0" mnemonicParsing="false" onAction="#checkAll" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: rgb(255,255,255);" text="All Accounts" />
+            </children>
+        </AnchorPane>
+    </bottom>
+    <center>
+        <AnchorPane prefHeight="543.0" prefWidth="800.0" style="-fx-background-color: rgb(255,255,255);" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="fullName" alignment="CENTER" layoutX="307.0" layoutY="-1.0" prefHeight="51.0" prefWidth="185.0" />
+                <TextField fx:id="customerId" prefHeight="50.0" prefWidth="150.0" promptText="Enter Account Id" />
+                <TableView fx:id="table" layoutY="50.0" prefHeight="530.0" prefWidth="800.0" style="-fx-background-color: rgb(255,255,255);" />
+
+            </children></AnchorPane>
+    </center>
+    <top>
+        <AnchorPane prefHeight="60.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="690.0" layoutY="12.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="40.0" prefWidth="95.0" style="-fx-background-color: rgb(255,255,255);" text="New Customer" />
+                <Button layoutX="493.0" layoutY="12.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="40.0" prefWidth="114.0" style="-fx-background-color: rgb(255,255,255);" text="Add Account" />
+                <Button fx:id="transbtn" layoutX="168.0" layoutY="12.0" mnemonicParsing="false" onAction="#checkTrans" prefHeight="40.0" style="-fx-background-color: rgb(255,255,255);" text="Check Transaction" />
+                <Button fx:id="checkbtn" layoutX="9.0" layoutY="12.0" mnemonicParsing="false" onAction="#checkAccount" prefHeight="40.0" style="-fx-background-color: rgb(255,255,255);" text="Check Account" />
+            <Button fx:id="transbtn1" layoutX="344.0" layoutY="10.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="40.0" style="-fx-background-color: rgb(255,255,255);" text="Add Employee" />
+            </children>
+        </AnchorPane>
+    </top>
+</BorderPane>

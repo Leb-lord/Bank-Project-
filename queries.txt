@@ -1,0 +1,104 @@
+User interface
+
+--check validation (Login page)
+public boolean checkValidation
+String query = "SELECT * FROM account WHERE custid = ? AND pass = ?";
+
+--Check Account 
+public void checkAccount(ActionEvent e)
+String query = "SELECT fname, mname, ltname FROM customer WHERE custid = ?";
+String query1 = "SELECT * FROM dbo.check_account(?)";
+
+--check Transaction
+public void checkTrans(ActionEvent e)
+String query = "SELECT fname, mname, ltname FROM customer WHERE custid = ?";
+String query1 = "SELECT * FROM dbo.check_transaction(?)";
+
+
+Employee interface
+
+---check validation(Login page)
+private boolean checkValidation
+String query = "SELECT * FROM employee WHERE empid = ? AND password = ? AND occupation = ?"
+
+--Check Account (customer manager page)
+public void checkAccount(ActionEvent e)
+String query = "SELECT fname, mname, ltname FROM customer WHERE custid = ?";
+String query1 = "SELECT * FROM dbo.check_account(?)";
+
+--check Transaction(customer manager page)
+public void checkTrans(ActionEvent e)
+String query = "SELECT fname, mname, ltname FROM customer WHERE custid = ?";
+String query1 = "SELECT * FROM dbo.check_transaction(?)";
+
+--transfer(transaction page)
+ public void transferMoney()
+ String query = "exec deposit_withdrawal @account=?, @dot=?, @medium_trans=?, @trans_type=?, @trans_amount=?"
+
+--new customer(add customer page)
+public void addCustomer(ActionEvent e)
+ String existanceQuery = "SELECT fname, mname, ltname, city, mobileno, occupation, dob FROM customer WHERE " +
+                "fname=? AND mname=? AND ltname=? AND city=? AND mobileno=? AND occupation=? AND dob=?";
+
+ String insertQuery = "INSERT INTO customer (fname, mname, ltname, city, mobileno, occupation, dob) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+--add account (add account page)
+public void addAccount(ActionEvent e)
+String query="INSERT INTO account (custid,bid,opening_balance,aod,atype,astatus,pass) VALUES(?,?,?,?,?,?,'123'
+
+
+Manager interface
+
+---check validation(Login page)
+private boolean checkValidation
+String query = "SELECT * FROM employee WHERE empid = ? AND password = ? AND occupation = ?"
+
+--Check Account (manager page)
+public void checkAccount(ActionEvent e)
+String query = "SELECT fname, mname, ltname FROM customer WHERE custid = ?";
+String query1 = "SELECT * FROM dbo.check_account(?)";
+
+--check Transaction (manager page)
+public void checkTrans(ActionEvent e)
+String query = "SELECT fname, mname, ltname FROM customer WHERE custid = ?";
+String query1 = "SELECT * FROM dbo.check_transaction(?)";
+
+--all employee(manager page)
+ public void addEmployee() {
+String query = "INSERT INTO Employee (bid, username, password, occupation) VALUES (?, ?, ?, ?
+
+--transfer(transaction page)
+ public void transferMoney()
+ String query = "exec deposit_withdrawal @account=?, @dot=?, @medium_trans=?, @trans_type=?, @trans_amount=?"
+
+--new customer(add customer page)
+public void addCustomer(ActionEvent e)
+ String existanceQuery = "SELECT fname, mname, ltname, city, mobileno, occupation, dob FROM customer WHERE " +
+                "fname=? AND mname=? AND ltname=? AND city=? AND mobileno=? AND occupation=? AND dob=?";
+
+ String insertQuery = "INSERT INTO customer (fname, mname, ltname, city, mobileno, occupation, dob) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+--add account (add account page)
+public void addAccount(ActionEvent e)
+String query="INSERT INTO account (custid,bid,opening_balance,aod,atype,astatus,pass) VALUES(?,?,?,?,?,?,'123'
+
+--add employee(add employee page)
+ public void addEmployee
+ String query = "INSERT INTO Employee (bid, username, password, occupation) VALUES (?, ?, ?, ?)
+
+--delete account(manager page)
+public void deleteAccount
+ String query = "DELETE FROM account WHERE custid=?"
+
+loan Manager
+--check loan (loanmanager page)
+private void checkLoan
+String query = "SELECT SUM(loan_amount) AS totalLoan FROM loan WHERE custid = ?"
+
+--add loan(loanmanager page)
+public void addLoan
+ String checkQuery = "SELECT * FROM loan WHERE custid = ? AND bid = ?";
+ String updateQuery = "UPDATE loan SET loan_amount = loan_amount + ? WHERE custid = ? AND bid = ?";
+ String insertQuery = "INSERT INTO loan (custid, bid, loan_amount) VALUES (?, ?, ?)";

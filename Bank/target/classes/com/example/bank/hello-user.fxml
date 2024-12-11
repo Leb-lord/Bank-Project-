@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane fx:id="border1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bank.HelloUser">
+   <top>
+      <AnchorPane prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: rgb(0,100,100);" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: rgb(0,100,100);" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="chkbtn" layoutX="690.0" layoutY="20.0" mnemonicParsing="false" onAction="#checkAccount" prefHeight="40.0" text="Check Account" />
+            <Button fx:id="transbtn" layoutX="338.0" layoutY="20.0" mnemonicParsing="false" onAction="#checkTrans" prefHeight="40.0" text="Account Transaction" />
+            <Button fx:id="cancbtn" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#cancelOnAction" prefHeight="40.0" prefWidth="60.0" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="fullName" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" prefHeight="50.0" prefWidth="200.0" text="Label" visible="false" />
+            <TableView fx:id="table" layoutY="50.0" prefHeight="491.0" prefWidth="800.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
