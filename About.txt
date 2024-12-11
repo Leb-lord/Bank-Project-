@@ -1,0 +1,4 @@
+This project is designed to solve Banking problems by seperating clients and employee by their
+functionality, and in the part of employee we have two level of functionality, first level for 
+standard employee and the second is the manager who can do all the functionality of employees 
+and more...
